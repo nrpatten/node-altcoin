@@ -1,6 +1,6 @@
 {
   "name": "node-altcoin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AltCoin RPC Node Client",
   "main": "lib/altcoin.js",
   "directories": {
