@@ -3,7 +3,7 @@
 node-altcoin is a altcoin client for Node.js. It is a fork of the excellent Kapitalize Bitcoin Client (now removed from GitHub) intended for use with most altcoins. The purpose of this repository is:
 
 * Provide a one-stop resource for the Node.js developer to get started with altcoin integration.
-* Promote Node.js development of cannacoin web apps.
+* Promote Node.js development of altcoin web apps.
 * Identify and address any incompatibilities with the altcoins and Bitcoin APIs that exist now and/or in the future.
 
 ## Dependencies
@@ -19,7 +19,7 @@ Then, install the node-altcoin NPM package.
 Some code examples follow below.
 
 ```js
-var cannacoin = require('node-altcoin')()
+var altcoin = require('node-altcoin')()
 
 altcoin.auth('myusername', 'mypassword')
 
@@ -34,7 +34,7 @@ altcoin.getDifficulty(function() {
 Pretty much everything is chainable.
 
 ```js
-var cannacoin = require('node-cannacoin')()
+var altcoin = require('node-altcoin')()
 
 altcoin
 .auth('MyUserName', 'mypassword')
@@ -102,7 +102,7 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 <tr>
 <td> addmultisigaddress </td>
 <td> [nrequired] ["key","key"] [account] </td>
-<td> <b>Currently only available on testnet</b> Add a nrequired-to-sign multisignature address to the wallet. Each key is a cannacoin address or hex-encoded public key. If [account] is specified, assign address to [account]. </td>
+<td> <b>Currently only available on testnet</b> Add a nrequired-to-sign multisignature address to the wallet. Each key is a altcoin address or hex-encoded public key. If [account] is specified, assign address to [account]. </td>
 <td> N
 </td></tr>
 <tr>
@@ -113,8 +113,8 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </td></tr>
 <tr>
 <td> dumpprivkey </td>
-<td> [cannacoinaddress] </td>
-<td> Reveals the private key corresponding to <cannacoinaddress< </td>
+<td> [altcoinaddress] </td>
+<td> Reveals the private key corresponding to <altcoinaddress< </td>
 <td> Y
 </td></tr>
 <tr>
@@ -125,14 +125,14 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </td></tr>
 <tr>
 <td> getaccount </td>
-<td> [cannacoinaddress] </td>
+<td> [altcoinaddress] </td>
 <td> Returns the account associated with the given address. </td>
 <td> N
 </td></tr>
 <tr>
 <td> getaccountaddress </td>
 <td> [account] </td>
-<td> Returns the current cannacoin address for receiving payments to this account. </td>
+<td> Returns the current altcoin address for receiving payments to this account. </td>
 <td> N
 </td></tr>
 <tr>
@@ -186,7 +186,7 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 <tr>
 <td> getgenerate </td>
 <td> </td>
-<td> Returns true or false whether cannacoind is currently generating hashes </td>
+<td> Returns true or false whether altcoind is currently generating hashes </td>
 <td> N
 </td></tr>
 <tr>
@@ -238,7 +238,7 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 <tr>
 <td> getnewaddress </td>
 <td> [account] </td>
-<td> Returns a new cannacoin address for receiving payments.  If [account] is specified (recommended), it is added to the address book so payments received with the address will be credited to [account]. </td>
+<td> Returns a new altcoin address for receiving payments.  If [account] is specified (recommended), it is added to the address book so payments received with the address will be credited to [account]. </td>
 <td> N
 </td></tr>
 <tr>
@@ -249,8 +249,8 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </td></tr>
 <tr>
 <td> getreceivedbyaddress </td>
-<td> [cannacoinaddress] [minconf=1] </td>
-<td> Returns the total amount received by <cannacoinaddress< in transactions with at least [minconf] confirmations. While some might consider this obvious, value reported by this only considers *receiving* transactions. It does not check payments that have been made *from* this address. In other words, this is not "getaddressbalance". Works only for addresses in the local wallet, external addresses will always show 0. </td>
+<td> [altcoinaddress] [minconf=1] </td>
+<td> Returns the total amount received by <altcoinaddress< in transactions with at least [minconf] confirmations. While some might consider this obvious, value reported by this only considers *receiving* transactions. It does not check payments that have been made *from* this address. In other words, this is not "getaddressbalance". Works only for addresses in the local wallet, external addresses will always show 0. </td>
 <td> N
 </td></tr>
 <tr>
@@ -293,7 +293,7 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </td></tr>
 <tr>
 <td> importprivkey </td>
-<td> [cannacoinprivkey] [label] </td>
+<td> [altcoinprivkey] [label] </td>
 <td> Adds a private key (as returned by dumpprivkey) to your wallet. </td>
 <td> Y
 </td></tr>
@@ -329,7 +329,7 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </li><li> "amount": total amount received by the address
 </li><li> "confirmations": number of confirmations of the most recent transaction included
 </li></ul>
-<p>To get a list of accounts on the system, execute cannacoind listreceivedbyaddress 0 true
+<p>To get a list of accounts on the system, execute altcoind listreceivedbyaddress 0 true
 </p>
 </td>
 <td> N
@@ -355,7 +355,7 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </td></tr>
 <tr>
 <td> sendfrom </td>
-<td> [fromaccount] [tocannacoinaddress] [amount] [minconf=1] [comment] [comment-to] </td>
+<td> [fromaccount] [toaltcoinaddress] [amount] [minconf=1] [comment] [comment-to] </td>
 <td> <amount< is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object). </td>
 <td> Y
 </td></tr>
@@ -367,13 +367,13 @@ All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, i
 </td></tr>
 <tr>
 <td> sendtoaddress </td>
-<td> [cannacoinaddress] [amount] [comment] [comment-to] </td>
+<td> [altcoinaddress] [amount] [comment] [comment-to] </td>
 <td> <amount< is a real and is rounded to 8 decimal places. Returns the transaction ID <txid< if successful. </td>
 <td> Y
 </td></tr>
 <tr>
 <td> setaccount </td>
-<td> [cannacoinaddress] [account] </td>
+<td> [altcoinaddress] [account] </td>
 <td> Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account. </td>
 <td> N
 </td></tr>
@@ -387,7 +387,7 @@ Generation is limited to [genproclimit] processors, -1 is unlimited. </td>
 </td></tr>
 <tr>
 <td> signmessage </td>
-<td> [cannacoinaddress] [message] </td>
+<td> [altcoinaddress] [message] </td>
 <td> Sign a message with the private key of an address. </td>
 <td> Y
 </td></tr>
@@ -400,18 +400,18 @@ Generation is limited to [genproclimit] processors, -1 is unlimited. </td>
 <tr>
 <td> stop </td>
 <td> </td>
-<td> Stop cannacoin server. </td>
+<td> Stop altcoin server. </td>
 <td> N
 </td></tr>
 <tr>
 <td> validateaddress </td>
-<td> [cannacoinaddress] </td>
-<td> Return information about [cannacoinaddress]. </td>
+<td> [altcoinaddress] </td>
+<td> Return information about [altcoinaddress]. </td>
 <td> N
 </td></tr>
 <tr>
 <td> verifymessage </td>
-<td> [cannacoinaddress] [signature] [message] </td>
+<td> [altcoinaddress] [signature] [message] </td>
 <td> Verify a signed message. </td>
 <td> N
 </td></tr>
@@ -463,7 +463,7 @@ Available options and default values:
 
 With an encryped wallet, any operation that accesses private keys requires a wallet unlock. A wallet is unlocked using the `walletpassphrase <passphrase> <timeout>` JSON-RPC method: the wallet will relock after `timeout` seconds.
 
-You may pass an optional function `passphrasecallback` to the `node-cannacoin` initialization function to manage wallet unlocks. `passphrasecallback` should be a function accepting three arguments:
+You may pass an optional function `passphrasecallback` to the `node-altcoin` initialization function to manage wallet unlocks. `passphrasecallback` should be a function accepting three arguments:
 
     function(command, args, callback) {}
 
@@ -534,5 +534,3 @@ npm install -g nodeunit
 
 nodeunit test/test-node-altcoin.js
 ```
-
-
