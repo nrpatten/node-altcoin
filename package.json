@@ -1,0 +1,25 @@
+{
+  "name": "node-altcoin",
+  "version": "0.1.0",
+  "description": "AltCoin RPC Node Client",
+  "main": "lib/altcoin.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nrpatten/node-altcoin.git"
+  },
+  "keywords": [
+    "altcoin"
+  ],
+  "author": "NRPatten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nrpatten/node-altcoin/issues"
+  },
+  "homepage": "https://github.com/nrpatten/node-altcoin"
+}
