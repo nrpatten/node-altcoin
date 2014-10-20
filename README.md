@@ -12,6 +12,10 @@ You'll need a running instance of a [litecoind](https://github.com/litecoin-proj
 
 Then, install the node-altcoin NPM package.
 
+`npm install node-altcoin`
+
+or
+
 `npm install git://github.com/nrpatten/node-altcoin/`
 
 ## Examples
@@ -87,8 +91,6 @@ altcoin.get('user')
 Generates authorization header, returns `this` for chainability
 
 ## Commands
-
-TODO: Write tests for these.
 
 All [Litecoin API](https://litecoin.info/Litecoin_API) commands are supported, in lowercase or camelcase form.
 
@@ -525,12 +527,4 @@ var altcoin = require('node-altcoin')({
   https: true,
   ca: ca
 })
-```
-
-## Testing
-
-```
-npm install -g nodeunit
-
-nodeunit test/test-node-altcoin.js
 ```

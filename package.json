@@ -1,11 +1,8 @@
 {
   "name": "node-altcoin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AltCoin RPC Node Client",
-  "main": "lib/altcoin.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "./altcoin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
