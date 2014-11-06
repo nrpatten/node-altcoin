@@ -1,5 +1,7 @@
 # A Node.js Altcoin Client!
 
+[![NPM](https://nodei.co/npm/node-altcoin.png?downloads=true&stars=true)](https://nodei.co/npm/node-altcoin/)
+
 node-altcoin is a altcoin client for Node.js. It is a fork of the excellent Kapitalize Bitcoin Client (now removed from GitHub) intended for use with most altcoins. The purpose of this repository is:
 
 * Provide a one-stop resource for the Node.js developer to get started with altcoin integration.
