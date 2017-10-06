@@ -11,6 +11,7 @@ var commands = module.exports.commands = [
   , 'getAddressesByAccount'
   , 'getBalance'
   , 'getBlock'
+  , 'getBlockByNumber'
   , 'getBlockCount'
   , 'getBlockHash'
   , 'getBlockCount'
